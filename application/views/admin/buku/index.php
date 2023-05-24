@@ -17,6 +17,8 @@
                     <th>Tahun Terbit</th>
                     <th>ISBN</th>
                     <th>Stok</th>
+                    <th>Dipinjam</th>
+                    <th>Dibooking</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -32,6 +34,8 @@
                         <td><?= $item['tahun_terbit'] ?></td>
                         <td><?= $item['isbn'] ?></td>
                         <td><?= $item['stok'] ?></td>
+                        <td><?= $item['dipinjam'] ?></td>
+                        <td><?= $item['dibooking'] ?></td>
                         <td>
                             <div>
                                 <a href="<?= site_url('buku/edit/' . $item['id']) ?>" class="btn btn-sm btn-primary">

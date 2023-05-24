@@ -51,6 +51,18 @@
                 <input type="number" class="form-control" name="stok" id="stok" required>
             </div>
         </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="font-weight-bold" for="dipinjam">Dipinjam <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" name="dipinjam" id="dipinjam" value="0" required>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="font-weight-bold" for="dibooking">Dibooking <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" name="dibooking" id="dibooking" value="0" required>
+            </div>
+        </div>
     </div>
     <div class="d-flex">
         <button class="btn btn-primary ml-auto">

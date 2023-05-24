@@ -74,16 +74,14 @@ class ModelBuku extends CI_Model
 
     public function totalBukuDipinjam()
     {
-        $this->db->select('COUNT(id) AS buku_dipinjam');
-        $this->db->where('dipinjam', true);
+        $this->db->select('SUM(dipinjam) AS buku_dipinjam');
 
         return $this->db->get('buku')->row()->buku_dipinjam;
     }
 
     public function totalBukuDibooking()
     {
-        $this->db->select('COUNT(id) AS buku_dibooking');
-        $this->db->where('dibooking', true);
+        $this->db->select('SUM(dibooking) AS buku_dibooking');
 
         return $this->db->get('buku')->row()->buku_dibooking;
     }

@@ -20,7 +20,7 @@ class Buku extends CI_Controller
     public function store()
     {
         $data = $this->input->post([
-            'judul_buku', 'id_kategori', 'pengarang', 'penerbit', 'tahun_terbit', 'isbn', 'stok',
+            'judul_buku', 'id_kategori', 'pengarang', 'penerbit', 'tahun_terbit', 'isbn', 'stok', 'dipinjam', 'dibooking',
         ]);
 
         $this->ModelBuku->simpanBuku($data);
@@ -41,7 +41,7 @@ class Buku extends CI_Controller
     public function update($id)
     {
         $data = $this->input->post([
-            'judul_buku', 'id_kategori', 'pengarang', 'penerbit', 'tahun_terbit', 'isbn', 'stok',
+            'judul_buku', 'id_kategori', 'pengarang', 'penerbit', 'tahun_terbit', 'isbn', 'stok', 'dipinjam', 'dibooking',
         ]);
 
         $this->ModelBuku->updateBuku($data, ['id' => $id]);
