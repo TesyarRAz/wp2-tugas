@@ -34,4 +34,14 @@ class ModelUser extends CI_Model
 
         return $this->db->get();
     }
+
+    public function totalUser()
+    {
+        $this->db->select('COUNT(user.id) as total_user');
+        $this->db->from('user');
+        $this->db->join('role', 'role.id = user.role_id');
+        $this->db->where('role.role', 'user');
+        
+        return $this->db->get()->row()->total_user;
+    }
 }

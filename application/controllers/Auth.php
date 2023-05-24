@@ -22,7 +22,7 @@ class Auth extends CI_Controller
             $data['user'] = '';
 
             $this->load->view('templates/auth_header', $data);
-            $this->load->view('auth/login');
+            $this->load->view('admin/login');
             $this->load->view('templates/auth_footer');
         } else {
             $this->_login();
@@ -50,7 +50,7 @@ class Auth extends CI_Controller
                         if ($user['image'] == 'default.jpg') {
                             $this->session->set_flashdata('pesan', '<div class="alert alert-info alert-message" role="alert">Silahkan Ubah Profile Anda untuk Ubah Photo Profil</div>');
                         }
-                        redirect('user');
+                        redirect('welcome/user');
                     }
                 } else {
                     $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Password salah!!</div>');
